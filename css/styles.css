@@ -381,6 +381,97 @@ body {
     margin-right: 40px;
   }
 }
+
+/* Hero */
+
+/* */
+.section-hero {
+  /* padding-top: 188px;
+  padding-bottom: 188px; */
+  padding-top: 112px;
+  padding-bottom: 112px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+  background: var(--color-grey);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-images/mob-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-images/mob-bg@2x.jpg);
+  }
+}
+@media only screen and (min-width: 429px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-images/tab-bg.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-images/tab-bg@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-images/desk-bg.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-images/desk-bg@2x.jpg);
+  }
+}
+.hero-title {
+  /* max-width: 496px; */
+  /* margin-bottom: 48px; */
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  /* font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07; */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+}
+
 /* 
 
 .header-nav {
