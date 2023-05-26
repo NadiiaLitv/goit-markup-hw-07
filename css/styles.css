@@ -147,8 +147,8 @@ body {
 
 /* Menu Toggle */
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: 24px;
+  min-width: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,7 +156,8 @@ body {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  border: none;
+  border: 1px solid;
+  border-color: var(--color-cornflower);
   border-radius: 50%;
   outline: none;
 }
@@ -214,6 +215,9 @@ body {
   text-transform: capitalize;
   color: var(--color-navy-blue);
   text-decoration: none;
+}
+.mobile-menu .studio-link {
+  color: var(--color-ocean);
 }
 .social-icons-list {
   display: flex;
