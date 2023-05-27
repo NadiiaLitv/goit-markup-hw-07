@@ -113,7 +113,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
+@media only screen and (max-width: 767px) {
+  .header-container {
+    height: 70px;
+  }
+}
 .logo-link {
   margin-right: 76px;
   font-family: 'Raleway', sans-serif;
@@ -127,30 +131,14 @@ body {
 .logo-header {
   color: var(--color-grey);
 }
-.menu .link {
-  padding: 10px;
-  color: inherit;
-  text-decoration: none;
-}
 
 /* Menu Toggle */
-.menu-toggle {
-  min-height: 24px;
-  min-width: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+.burger-btn {
+  border: none;
   background-color: transparent;
-  cursor: pointer;
-  border: 1px solid;
-  border-color: var(--color-cornflower);
-  border-radius: 50%;
-  outline: none;
 }
 @media (min-width: 768px) {
-  .menu-toggle {
+  .burger-btn {
     display: none;
   }
 }
@@ -170,9 +158,25 @@ body {
 .menu-container.is-open {
   transform: translateX(0);
 }
+.menu-toggle {
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: var(--color-cornflower);
+  border-radius: 50%;
+  outline: none;
+}
 .menu-container .social-icons-list {
   justify-content: start;
   gap: 56px;
+  flex-wrap: wrap;
 }
 .menu-container .menu-toggle {
   position: absolute;
@@ -268,7 +272,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--color-slate);
 }
-
 /*  */
 
 @media only screen and (min-width: 768px) {
@@ -277,7 +280,6 @@ body {
     align-items: center;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .menu-item:not(:last-child) {
     margin-right: 40px;
@@ -289,7 +291,6 @@ body {
 .menu-link {
   display: none;
 }
-
 @media only screen and (min-width: 768px) {
   .menu-link {
     display: flex;
@@ -315,6 +316,7 @@ body {
 .underline::after {
   display: block;
   position: absolute;
+  left: 0;
   bottom: 0;
   content: '';
   width: 48px;
@@ -322,9 +324,6 @@ body {
   border-radius: 2px;
   background-color: var(--color-ocean);
 }
-/* .portfolio::after {
-   width: 66px;
-  } */
 /*  */
 
 .contacts {
@@ -376,8 +375,6 @@ body {
 /*  */
 
 .section-hero {
-  /* padding-top: 188px;
-  padding-bottom: 188px; */
   max-width: 1440px;
   padding-top: 112px;
   padding-bottom: 112px;
@@ -385,7 +382,7 @@ body {
   margin-right: auto;
   text-align: center;
   background-position: center;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-size: cover;
   background: var(--color-grey);
   background-image: linear-gradient(
@@ -792,34 +789,21 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 72px;
 }
 @media only screen and (min-width: 768px) {
   .footer-container {
-    align-items: start;
-    margin-right: 24px;
+    display: block;
   }
 }
-@media only screen and (min-width: 1158px) {
-  .footer-container {
-    margin-bottom: 0;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .social-media-conteiner {
-    margin-bottom: 0;
-  }
-}
+
 .logo-footer {
   color: var(--color-cloud);
 }
-@media only screen and (max-width: 767px) {
-  .logo-link {
-    margin-right: 0;
-  }
-}
+
 .footer-link {
+  display: block;
   margin-bottom: 16px;
+  margin-right: 0;
 }
 .footer-section-text {
   width: 268px;
@@ -852,14 +836,23 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 72px 24px;
   /* align-items: baseline; */
 }
-
 @media only screen and (min-width: 768px) {
   .footer-main-container {
     flex-direction: row;
     align-items: baseline;
-    justify-content: center;
+    justify-content: start;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-main-container {
+    width: 552px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -868,6 +861,7 @@ body {
   }
   .footer-main-container {
     flex-wrap: nowrap;
+    gap: 0;
   }
   .footer-container {
     margin-right: 120px;
