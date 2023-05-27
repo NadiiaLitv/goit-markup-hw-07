@@ -132,10 +132,6 @@ body {
   color: inherit;
   text-decoration: none;
 }
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
-}
 
 /* Menu Toggle */
 .menu-toggle {
@@ -220,11 +216,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-/* @media only screen and (min-width: 428px) {
-  .social-icons-list {
-    gap: 56px;
-  }
-} */
+
 .social-icons-item,
 .social-media-item {
   width: 40px;
@@ -316,12 +308,11 @@ body {
   }
 }
 /* ::AFTER */
-.link-studio,
-.link-portfolio {
+.underline {
   position: relative;
   color: var(--color-ocean);
 }
-.link-studio::after {
+.underline::after {
   display: block;
   position: absolute;
   bottom: 0;
@@ -331,17 +322,9 @@ body {
   border-radius: 2px;
   background-color: var(--color-ocean);
 }
-.link-portfolio::after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  content: '';
-  width: 66px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--color-ocean);
-}
+/* .portfolio::after {
+   width: 66px;
+  } */
 /*  */
 
 .contacts {
@@ -391,6 +374,7 @@ body {
 /*  */
 /* Hero */
 /*  */
+
 .section-hero {
   /* padding-top: 188px;
   padding-bottom: 188px; */
@@ -400,21 +384,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
   background: var(--color-grey);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero-images/mob-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media only screen and (min-width: 1158px) {
-  .section-hero {
-    padding-top: 188px;
-    padding-bottom: 188px;
-  }
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -466,6 +444,12 @@ body {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-images/desk-bg@2x.jpg);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
   }
 }
 .hero-title {
