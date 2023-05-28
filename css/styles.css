@@ -384,7 +384,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: var(--color-grey);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
